@@ -1,59 +1,57 @@
-class Animal{
-    constructor(name){
-        this.name = name
-    }
-    
-    eat(){
-        console.log(this.name + ' eats')
-    }
-    sounds(){
-        return('sound')
-    }
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(this.name + " eats");
+  }
+  sounds() {
+    return "sound";
+  }
 }
-class Dog extends Animal{
-    constructor(name){
-        super(name)
-    }
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
 
-    sounds(){
-        console.log('Dog barks')
-    }
-}
-
-var dog = new Dog('Rax')
-dog.eat()
-dog.sounds()
-
-class Cat extends Animal{
-    constructor(name){
-        super(name)
-    }
-
-    sounds(){
-        console.log('Cat meows')
-    }
+  sounds() {
+    console.log("Dog barks");
+  }
 }
 
-var cat = new Cat('Stormy')
-cat.eat()
-cat.sounds()
+var dog = new Dog("Rax");
+dog.eat();
+dog.sounds();
 
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  sounds() {
+    console.log("Cat meows");
+  }
+}
+
+var cat = new Cat("Stormy");
+cat.eat();
+cat.sounds();
 
 class Home {
-    constructor(){
-        this.adoptedAnimals = []
-    }
+  constructor() {
+    this.adoptedAnimals = [];
+  }
 
-    adoptPet(pet){
-        this.adoptedAnimals.push(pet);
-    }
+  adoptPet(pet) {
+    this.adoptedAnimals.push(pet);
+  }
 
-    makeAllSounds (){
-        for(var i = 0; i < this.adoptedAnimals.length; i++){
-            this.adoptedAnimals[i].sounds();
-        }
-     }
-           
+  makeAllSounds() {
+    for (var i = 0; i < this.adoptedAnimals.length; i++) {
+      this.adoptedAnimals[i].sounds();
+    }
+  }
 }
 
 var home = new Home();
